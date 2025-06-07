@@ -339,7 +339,7 @@ nano /etc/docker/daemon.json
 
 ## 🎥 视频地址
 
-👉 敬请期待（录制完成后补充）
+[Docker 的卸载与安装](https://www.bilibili.com/video/BV1SRT5z4Em4/?vd_source=78b0cb503540adde7afb8d3f4bb265ae)
 
 ## ❓ 常见问题
 
