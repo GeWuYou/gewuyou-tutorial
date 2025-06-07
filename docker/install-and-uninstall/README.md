@@ -181,8 +181,6 @@ rm -rf ~/.docker
 
    ------
 
-   
-
 2. 使用阿里云镜像源安装（国内）
 
    ```sh
@@ -292,8 +290,6 @@ docker run --rm hello-world
 
 ![image-20250607112019325](assets/README/image-20250607112019325.png)
 
-
-
 #### 2.3 常用优化
 
 ##### 2.3.1 镜像加速
@@ -351,6 +347,6 @@ Q: docker: Error response from daemon: connection refused
 
 A：Docker daemon 未运行：`systemctl status docker` 查看，若端口被占用或 JSON 配置格式错误需修正后重启。
 
----
+------
 
 > 本节内容遵循 Apache 2.0 协议，欢迎引用与转载，需保留原始署名。
