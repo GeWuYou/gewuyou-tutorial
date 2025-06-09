@@ -5,7 +5,7 @@
 ## 🎯 教程目标
 
 - 本节你将学到：
-  - 如何使用 Docker 和 Docker Compose 安装 Gitea；
+  - 如何编写 docker-compose.yml来 安装 Gitea；
   - 如何配置 Gitea 的服务参数和数据存储；
   - 如何通过浏览器访问并初始化 Gitea 实例。
 
@@ -18,18 +18,18 @@
 - Docker
 - Docker Compose
 
-如未安装，可参考前面的章节：[一键安装 Docker + Compose](../../docker/one-click-install/README.md)
+如未安装，可参考前面的章节：[一键安装 Docker](../../docker/one-click-install/README.md)
 
 ### 2. 创建项目目录结构
 
 ```bash
-mkdir -p ~/docker/gitea
-cd ~/docker/gitea
+sudo mkdir -p /opt/docker/gitea
+cd /opt/docker/gitea
 ```
 
 ### 3. 编写 `docker-compose.yml` 文件
 
-在 `~/docker/gitea` 目录下创建 `docker-compose.yml`：
+在 `/opt/docker/gitea` 目录下创建 `docker-compose.yml`：
 
 ```yaml
 version: "3.8" # 如果你使用的是最新版本的docker compose 请删除此行
@@ -56,7 +56,7 @@ services:
       - /etc/localtime:/etc/localtime:ro  # 共享主机时间设置，只读挂载
 
     ports:                    # 端口映射，主机 → 容器
-      - "3001:3000"           # 网页 UI：主机 3001 映射容器 3000
+      - "3100:3000"           # 网页 UI：主机 3100 映射容器 3000
       - "2222:22"             # SSH 访问：主机 2222 映射容器 22
 
     depends_on:              # 定义依赖关系，确保数据库先启动并健康后再启动 Gitea
@@ -88,15 +88,9 @@ docker-compose up -d
 
 ### 5. 访问 Gitea 界面并初始化
 
-打开浏览器，访问：[http://localhost:3001](http://localhost:3001)
+打开浏览器，访问：[http://<你的服务器IP>:3100](http://172.21.235.129:3100)
 
-进行如下初始化配置：
-
-- 数据库类型：PostgreSQL
-- 主机名：`db:5432`
-- 用户名：`gitea`
-- 密码：`s1tGsUUMAWLq`(这里替换成你自己的密码)
-- 数据库名称：`gitea`
+不出意外，所有关键必填配置均已有值(已在环境变量中指定，但你依旧能在此配置修改，但不建议修改)
 
 其他设置保持默认，点击“安装 Gitea”。
 
@@ -108,7 +102,7 @@ docker-compose up -d
 
 ## ❓ 常见问题
 
-### Q: 为什么我访问 [http://localhost:3001](http://localhost:3001) 页面打不开？
+### Q: 为什么我访问 [http://localhost:3100](http://localhost:3100) 页面打不开？
 
 - 请确认 Docker 服务正在运行；
 - 使用 `docker ps` 查看容器是否已启动；
