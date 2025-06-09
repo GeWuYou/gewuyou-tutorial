@@ -100,7 +100,7 @@ sudo usermod -aG docker $USER
 
 ## 🎥 视频地址
 
-👉 敬请期待（录制完成后补充）
+[一键安装 Docker](https://www.bilibili.com/video/BV1QyTyz1E1K/)
 
 ---
 
