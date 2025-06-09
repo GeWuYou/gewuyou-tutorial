@@ -98,7 +98,7 @@ docker-compose up -d
 
 ## 🎥 视频地址
 
-👉 敬请期待（录制完成后补充）
+[Gitea的安装与基础配置](https://www.bilibili.com/video/BV1kX7izeEUY/)
 
 ## ❓ 常见问题
 
