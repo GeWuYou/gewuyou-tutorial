@@ -51,7 +51,7 @@ services:
     restart: unless-stopped    # 容器在非正常退出时自动重启，除非手动停止
 
     volumes:                  # 将主机目录挂载到容器内部，实现数据持久化
-      - ./gitea:/data/gitea         # Gitea 核心数据（仓库、用户文件等）
+      - ./gitea:/data         # Gitea 核心数据（仓库、用户文件等）
       - /etc/timezone:/etc/timezone:ro    # 共享主机时区配置，只读挂载
       - /etc/localtime:/etc/localtime:ro  # 共享主机时间设置，只读挂载
 
@@ -88,7 +88,7 @@ docker-compose up -d
 
 ### 5. 访问 Gitea 界面并初始化
 
-打开浏览器，访问：[http://<你的服务器IP>:3100](http://172.21.235.129:3100)
+打开浏览器，访问：[http://<服务器IP>:3100](http://172.21.235.129:3100)
 
 不出意外，所有关键必填配置均已有值(已在环境变量中指定，但你依旧能在此配置修改，但不建议修改)
 
@@ -102,7 +102,7 @@ docker-compose up -d
 
 ## ❓ 常见问题
 
-### Q: 为什么我访问 [http://localhost:3100](http://localhost:3100) 页面打不开？
+### Q: 为什么我访问 [http://<服务器IP>:3100](http://172.21.235.129:3100) 页面打不开？
 
 - 请确认 Docker 服务正在运行；
 - 使用 `docker ps` 查看容器是否已启动；
