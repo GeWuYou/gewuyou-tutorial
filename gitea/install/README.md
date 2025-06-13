@@ -112,6 +112,7 @@ docker-compose up -d
 
 - 本教程的 Docker Compose 配置已挂载本地目录到容器，可持久化数据；
 - 请定期备份 `~/docker/gitea` 目录下的数据。
+- 如果遇到重启后，登录gitea发现明明用户名密码是对的但gitea提示错误(数据丢失)，请重启gitea的数据库，这应该能解决问题
 
 ---
 
