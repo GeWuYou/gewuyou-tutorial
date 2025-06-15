@@ -70,7 +70,7 @@ git push origin main
 
 ## 🎥 视频地址
 
-👉 敬请期待（录制完成后补充）
+[Gitea中创建用户与代码仓库](https://www.bilibili.com/video/BV1eCTWzdExs)
 
 ## ❓ 常见问题
 
