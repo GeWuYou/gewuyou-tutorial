@@ -121,19 +121,13 @@ GITEA_RUNNER_LABELS: "<标签>:docker://<镜像地址>"
 ##### 🎯 多标签绑定同一镜像：
 
 ```yaml
-GITEA_RUNNER_LABELS: |
-  ubuntu-latest:docker://devxci/mbtci-java21-node20
-  java:docker://devxci/mbtci-java21-node20
-  node:docker://devxci/mbtci-java21-node20
+GITEA_RUNNER_LABELS: "ubuntu-latest:docker://devxci/mbtci-java21-node20,java:docker://devxci/mbtci-java21-node20,node:docker://devxci/mbtci-java21-node20"
 ```
 
 ##### 🎯 多标签绑定不同镜像：
 
 ```yaml
-GITEA_RUNNER_LABELS: |
-  java:docker://devxci/java21-builder
-  node:docker://devxci/node20-builder
-  python:docker://devxci/python312-builder
+GITEA_RUNNER_LABELS: "java:docker://devxci/java21-builder,node:docker://devxci/node20-builder,python:docker://devxci/python312-builder"
 ```
 
 ##### ✅ 小贴士
@@ -191,6 +185,8 @@ Gitea 支持按以下层级注册 Runner：
 | 实例级别 | 管理后台 → Actions Runners | 所有仓库           | 集群共享、全局构建 |
 | 组织级别 | 组织设置 → Actions Runners | 当前组织下所有仓库 | 同一组织内共享     |
 | 仓库级别 | 项目设置 → Actions Runners | 当前单个仓库       | 项目独立、资源隔离 |
+
+> 其实还有个人级别的runner只有归属于个人下的项目才能使用
 
 ##### 示例：同时部署多个 Runner
 
