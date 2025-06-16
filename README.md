@@ -12,8 +12,11 @@
   - [创建用户与代码仓库](./gitea/create-user-and-repo/README.md)
   - [组织与团队管理](./gitea/org-team-management/README.md)
   - [安装 Runner 与 CI/CD 集成(Gitea Actions)](./gitea/install-runner-and-cicd/README.md)
+  - [Gitea 包注册教程](./gitea/package-registry/README.md)]
   - [Gitea 的备份与恢复](./gitea/backup-restore/README.md)
   - [高级配置与权限控制](./gitea/advanced-config/README.md)
+- [Maven 教程系列](./maven/)
+  - [发布到 Maven Central 教程](./maven/publish-central/README.md)
 
 > 更多教程正在整理中，敬请期待！
 
