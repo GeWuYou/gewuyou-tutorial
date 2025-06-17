@@ -106,7 +106,7 @@
 ```kotlin
 publishing {
     publications {
-        gitea(MavenPublication) {
+        create<MavenPublication>("mavenJava") {
             groupId = 'com.example'
             artifactId = 'my-lib'
             version = '1.1.4'
@@ -182,6 +182,28 @@ mvn deploy
 
 ✅ Maven 项目
 
+在您项目的 `pom.xml` 文件中设置此注册中心：
+
+```xml
+<repositories>
+	<repository>
+		<id>gitea</id>
+<url>http://{gitea_url}/api/packages/{owner}/maven</url>
+	</repository>
+</repositories>
+
+<distributionManagement>
+	<repository>
+		<id>gitea</id>
+		<url>http://{gitea_url}/api/packages/{owner}/maven</url>
+	</repository>
+
+	<snapshotRepository>
+		<id>gitea</id>
+		<url>http://{gitea_url}/api/packages/{owner}/maven</url>
+	</snapshotRepository>
+</distributionManagement>
+```
 要从软件包注册表中安装 Maven 软件包，请在项目的 `pom.xml` 文件中添加新的依赖项
 
 > 请自行替换groupId artifactId version
@@ -195,6 +217,20 @@ mvn deploy
 ```
 
 ✅ Gradle 项目
+
+在您项目的 `build.gradle.kts` 文件中设置此注册中心：
+
+```kotlin
+repositories {
+	    maven{
+        url = uri("http://{gitea_url}/api/packages/{owner}/maven")
+       // 请注意，如果你的是http请开启此项
+       // isAllowInsecureProtocol = true
+    }
+}
+```
+
+通过这个导入
 
 ```kotlin
 implementation ("com.test.package:test_project:1.0.0")
