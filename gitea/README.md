@@ -21,9 +21,6 @@
 - [使用 Gitea 搭建私有软件包仓库](./package-registry/README.md)
   在Gitea 搭建私有软件包仓库，
 
-- [Docker 下 Gitea 的备份与恢复](./backup-restore/README.md)  
-  覆盖完整的数据备份策略与容灾恢复方法，提升服务稳定性。
-
 - [高级配置与权限控制](./advanced-config/README.md)  
   深入配置 Gitea 核心参数，构建自定义权限策略与访问控制逻辑。
 
