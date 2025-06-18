@@ -1,0 +1,24 @@
+# 容器备份配置列表
+# 每个条目定义了一个容器的备份设置
+containers:
+  # PostgreSQL卷备份配置
+  # type: volume 表示这是一个命名卷
+  # source: 卷名称，对应Docker中PostgreSQL的数据存储位置
+  # backup_file: 备份文件名
+  # output_dir: 输出目录，用于存放备份文件
+  - name: pg-volume
+    type: volume
+    source: pgdata
+    backup_file: pg-volume.tar.gz
+    output_dir: backup/volumes
+
+  # PostgreSQL绑定挂载备份配置
+  # type: bind 表示这是一个绑定挂载
+  # source: 主机上的源数据目录
+  # backup_file: 备份文件名
+  # output_dir: 输出目录，用于存放备份文件
+  - name: pg-bind
+    type: bind
+    source: bind-mount/data
+    backup_file: pg-bind.tar.gz
+    output_dir: backup/binds
