@@ -1,5 +1,7 @@
 # 容器备份配置列表
 # 每个条目定义了一个容器的备份设置
+config:
+  - backup_root: backup
 containers:
   # PostgreSQL卷备份配置
   # type: volume 表示这是一个命名卷
@@ -10,7 +12,7 @@ containers:
     type: volume
     source: backup-and-restore_pgdata
     backup_file: pg-volume.tar.gz
-    output_dir: backup/volumes
+    output_dir: /volumes
 
   # PostgreSQL绑定挂载备份配置
   # type: bind 表示这是一个绑定挂载
@@ -23,4 +25,4 @@ containers:
     source: bind-mount/data
     # restore_target: /opt/data/restore-pg  # ✅ 可选字段
     backup_file: pg-bind.tar.gz
-    output_dir: backup/binds
+    output_dir: /binds
