@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  pg-volume:
+    image: postgres:16
+    container_name: pg-volume
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: volumedb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  pg-bind:
+    image: postgres:16
+    container_name: pg-bind
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: binddb
+    volumes:
+      - ./bind-mount/data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+volumes:
+  # 请注意如果在备份的情况下，使用原来的带默认前缀的数据卷，请同步修改数据卷名称
+  pgdata:
+    # 备份时，如果是先创建数据卷，请开启此项，如果是先创建容器，请注释此项
+    # external: true

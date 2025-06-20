@@ -7,7 +7,7 @@
 - [Docker 教程系列](./docker/)
   - [Docker 的卸载与手动安装](./docker/install-and-uninstall/README.md)
   - [一键安装 Docker](./docker/one-click-install/README.md)
-  - [Docker 容器的备份与恢复](./backup-and-restore/README.md)
+  - [Docker 容器的备份与恢复](./docker/backup-and-restore/README.md)
 - [Gitea 教程系列](./gitea/)
   - [Gitea 的安装与基础配置](./gitea/install/README.md)
   - [创建用户与代码仓库](./gitea/create-user-and-repo/README.md)
