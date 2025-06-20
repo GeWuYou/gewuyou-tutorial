@@ -240,7 +240,7 @@ implementation ("com.test.package:test_project:1.0.0")
 
 ## 🎥 视频地址
 
-👉 敬请期待（录制完成后补充）
+[使用 Gitea 搭建 Java 私服并发布软件包](https://www.bilibili.com/video/BV1nSNYzdEqc/)
 
 ---
 

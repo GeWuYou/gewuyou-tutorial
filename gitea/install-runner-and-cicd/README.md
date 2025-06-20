@@ -238,7 +238,7 @@ services:
 
 ## 🎥 视频地址
 
-👉 敬请期待（录制完成后补充）
+[Gitea安装Runner](https://www.bilibili.com/video/BV1GpMbzzEPb/)
 
 ---
 
