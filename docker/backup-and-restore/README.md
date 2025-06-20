@@ -493,6 +493,10 @@ containers:
 | `output_dir`  | 备份文件输出的目录（相对路径）          |
 | `restore_target` | 恢复目标目录，可选字段 |
 
+## 🎥 视频地址
+
+[Docker 容器的备份与恢复](https://www.bilibili.com/video/BV1VqKwztE1A/)
+
 ---
 
 > 本项目遵循 Apache 2.0 协议，欢迎引用与修改。
