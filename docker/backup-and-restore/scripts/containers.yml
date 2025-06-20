@@ -3,12 +3,12 @@
 containers:
   # PostgreSQL卷备份配置
   # type: volume 表示这是一个命名卷
-  # source: 卷名称，对应Docker中PostgreSQL的数据存储位置
+  # source: 卷名称，对应Docker中PostgreSQL的数据存储位置，请注意如果使用的是Docker Copmpose，请确保该卷名称与容器实际volume名称一致
   # backup_file: 备份文件名
   # output_dir: 输出目录，用于存放备份文件
   - name: pg-volume
     type: volume
-    source: pgdata
+    source: backup-and-restore_pgdata
     backup_file: pg-volume.tar.gz
     output_dir: backup/volumes
 
@@ -17,8 +17,10 @@ containers:
   # source: 主机上的源数据目录
   # backup_file: 备份文件名
   # output_dir: 输出目录，用于存放备份文件
+  # restore_target: 恢复目标目录，可选字段
   - name: pg-bind
     type: bind
     source: bind-mount/data
+    # restore_target: /opt/data/restore-pg  # ✅ 可选字段
     backup_file: pg-bind.tar.gz
     output_dir: backup/binds
