@@ -42,7 +42,7 @@ curl -fsSL https://get.docker.com | sudo sh
 
 ```bash
 sudo sh get-docker.sh --mirror Aliyun
-sudo sh get-docker.sh --mirror AzureChinacloud
+sudo sh get-docker.sh --mirror AzureChinaCloud
 ```
 
 #### 2.2 启动Docker
