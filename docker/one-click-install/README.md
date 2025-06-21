@@ -41,8 +41,8 @@ curl -fsSL https://get.docker.com | sudo sh
 或者使用其它镜像加速版本：
 
 ```bash
-sudo sh get-docker.sh --mirror Aliyun
-sudo sh get-docker.sh --mirror AzureChinaCloud
+curl -fsSL https://get.docker.com | sudo sh -s -- --mirror Aliyun
+curl -fsSL https://get.docker.com | sudo sh -s -- --mirror AzureChinaCloud
 ```
 
 #### 2.2 启动Docker
