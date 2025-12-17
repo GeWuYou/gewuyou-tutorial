@@ -7,9 +7,8 @@
 - 本节你将学到：
   - 如何部署 GitLab Runner（基于 Docker）；
   - 如何注册 Runner 到 GitLab；
-  - 如何编写 `.gitlab-ci.yml` 工作流文件；
-  - 如何触发 CI/CD 流程；
-  - 如何理解并部署不同类型的 Runner。
+  - 如何编写简单的示例 `.gitlab-ci.yml` 工作流文件；
+  - 如何理解不同类型的 Runner；
 
 ## 📦 步骤说明
 
